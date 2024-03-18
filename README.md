@@ -46,33 +46,30 @@ To ensure that we can complete all core features of the application in 1 week, w
 
 **Day 1**
 
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+- [ ] Complete the project proposal - Due **03/18**
+- [ ] Setup the project's scrumboard on github - Due **03/18**
+- [ ] Create a new vite-project and setup the project skeleton - Due **03/18**
 
 **Day 2**
 
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+- [ ] Start fetching the required data from the endpoints - Due **03/19**
+- [ ] Start working on the different page's components (static) - Due **03/19**
+- [ ] Make sure our API works. - Due **03/19**
 
 **Day 3**
 
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+- [ ] Start rendering the fetched data - Due **03/20**
+- [ ] Make sure the pages are linked together properly - Due **03/20**
 
 **Day 4**
 
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+- [ ] Make sure components such as the navbar and search bars are working correctly. - Due **03/21**
+- [ ] Complete the styling - Due **03/21**
 
 **Day 5**
 
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
-- [ ] Ticket description and due date
+- [ ] Deploy to github pages - Due **03/22**
+- [ ] Start working on stretch features - Due **03/22**
 
 ## Wireframes of each page in your application
 
@@ -81,3 +78,9 @@ Below, you can find wireframes for our project. Each wireframe shows a different
 [Wireframe for page 1]
 
 [Wireframe for page 2]
+
+[Wireframe for page 3]
+
+[Wireframe for page 4]
+
+[Wireframe for page 5]
