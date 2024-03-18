@@ -1,21 +1,21 @@
 # Tangerine-Trumpoid
 
-Created by [team member] and Berlineda Faurelus.
+Created by Nico Aroca and Berlineda Faurelus.
 
 ## 🚀 Mission statement
 
-Our application, [app name] is for [target audience]. It allows users to [what it does and why audience would use it]
+Our application, Tangerine-Trumpoid, is tailored for those who find Donald Trump amusing. It enables users to explore the controversial remarks made by Donald Trump. An audience may choose to utilize it for a multitude of reasons, including curiosity, entertainment, or conducting research.
 
 ## API
 
-This application will use the [name of API] API. Below are the documentation and specific endpoints we intend to use.
+This application will use the **Tronald Dump API**. Below are the documentation and specific endpoints we intend to use.
 
-- Link to API documentation: [Link goes here]
-- [API endpoint #1]
+- Link to API documentation: https://api.tronalddump.io/
+- https://api.tronalddump.io/tag
+  -
+- https://api.tronalddump.io/random/meme
   - [List of data values used by the endpoint]
-- [API endpoint #2]
-  - [List of data values used by the endpoint]
-- [API endpoint #3]
+- https://api.tronalddump.io/quote/{id}
   - [List of data values used by the endpoint]
 
 [If your API requires an API key, say so here.]
