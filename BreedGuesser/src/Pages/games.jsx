@@ -1,14 +1,5 @@
-import Navbar from "../Components/Navbar";
+const Games = () => <h1>Let's play</h1>;
 
 
 
-
-export default function Games(){
-    return (
-        <>
-        <Navbar />
-        <h2>Let's play</h2>
-        
-        </>
-    )
-}
+export default  Games

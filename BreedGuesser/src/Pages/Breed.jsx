@@ -1,13 +1,5 @@
-import Navbar from "../Components/Navbar";
+
+const Breed = () => <h1>Here's some picture</h1>;
 
 
-
-export default function Breed(){
-    return (
-        <>
-        <Navbar />
-        <h2>pictures</h2>
-        
-        </>
-    )
-}
+export default Breed

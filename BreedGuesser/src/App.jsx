@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react'
-import {BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Games from './Pages/games'
-import Home from './Pages/home'
-import Breeds from './Pages/Breeds'
-import Error from './Pages/error'
 import Breed from './Pages/Breed'
+import NavBar from './Components/Navbar'
+import Breeds from './Pages/Breeds'
+import Home from './Pages/home'
+import Error from './Pages/error'
+
+
 
 
 
@@ -14,8 +17,10 @@ import Breed from './Pages/Breed'
 function App() {
  
   return (
-    <div>
+    <>
       <BrowserRouter>
+    <NavBar />
+    <main>
       <Routes>
       <Route index element = {<Home />} />
       <Route path='/home' element= {<Home />} />
@@ -26,11 +31,10 @@ function App() {
 
       </Routes>
       
-      
+
+    </main>
       </BrowserRouter>
-
-
-    </div>
+    </>
   )
 
   

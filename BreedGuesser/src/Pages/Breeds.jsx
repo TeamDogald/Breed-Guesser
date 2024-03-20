@@ -1,13 +1,3 @@
-import Navbar from "../Components/Navbar";
+const Breeds = () => <h1>Look at all the breeds</h1>;
 
-
-
-export default function Breeds(){
-    return (
-        <>
-        <Navbar />
-        <h2>Browse all the Breeds</h2>
-        
-        </>
-    )
-}
+export default  Breeds
