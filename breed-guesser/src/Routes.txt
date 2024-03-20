@@ -1,0 +1,11 @@
+ROUTES WE'LL BE USING!!!!
+
+THIS GIVES BACK A SHIT TON OF DOGGY DOG IMGAES.
+ https://dog.ceo/api/breed/{BREED}/images
+
+THIS GIVES BACK A LIST OF ALL THE LIST
+ https://dog.ceo/api/breeds/list/all
+
+THIS GIVES BACK A SINGLE IMAGE OF A RANDOM DOG (use for little memory game(?))
+ https://dog.ceo/api/breeds/image/random
+
