@@ -1,10 +1,10 @@
-# Tangerine-Trumpoid
+# Breed Guesser
 
-Created by Nico Aroca and Berlineda Faurelus.
+Created by [Nico Aroca](https://github.com/tailsmster) and [Berlineda Faurelus](https://github.com/Faurelus).
 
 ## 🚀 Mission statement
 
-Our application, Tangerine-Trumpoid, is tailored for those who find Donald Trump amusing. It enables users to explore the controversial remarks made by Donald Trump. An audience may choose to utilize it for a multitude of reasons, including curiosity, entertainment, or conducting research.
+Our application, Breed Guesser, is tailored for those who enjoy looking at pictures of dogs. It enables users to play a game that test's their knowledge on different dog breeds, as well as view different pictures of different dogs!
 
 ## API
 
