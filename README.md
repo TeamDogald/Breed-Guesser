@@ -11,7 +11,7 @@ Our application, Tangerine-Trumpoid, is tailored for those who find Donald Trump
 This application will use the **Tronald Dump API**. Below are the documentation and specific endpoints we intend to use.
 
 - Link to API documentation: https://api.tronalddump.io/
-- https://api.tronalddump.io/tag/{TAG}
+- https://www.tronalddump.io/tag/
   - Retrieve qoutes based on their tag.
 - https://api.tronalddump.io/search/quote?query={USERINPUT}
   - Retrieve qoutes based on if the quote itself includes the word that the user searched for.
