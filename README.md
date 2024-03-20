@@ -8,7 +8,7 @@ Our application, Breed Guesser, is tailored for those who enjoy looking at pictu
 
 ## API
 
-This application will use the **Tronald Dump API**. Below are the documentation and specific endpoints we intend to use.
+This application will use the **DOG API**. Below are the documentation and specific endpoints we intend to use.
 
 - Link to API documentation: https://dog.ceo/dog-api/
 - https://api.tronalddump.io/tag/{TAG}
