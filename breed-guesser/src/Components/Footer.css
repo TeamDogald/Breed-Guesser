@@ -1,0 +1,48 @@
+.main-footer {
+    color: rgb(213, 154, 59);
+    background-color: aqua;
+    padding-top: 3em;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100; /* Ensure the footer is above other content */
+  }
+  
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+  }
+  
+  .footer-column {
+    flex-basis: 45%; 
+  }
+  
+  .footer-column h4 {
+    margin-bottom: 1em; 
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 0.5em; 
+  }
+  .col-sm {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1em 0; 
+  }  

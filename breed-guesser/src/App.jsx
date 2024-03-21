@@ -7,6 +7,7 @@ import Breeds from './Pages/Breeds'
 import Home from './Pages/home'
 import Error from './Pages/error'
 import FetchData from './utils/FetchData'
+import Footer from './Components/Footer'
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
     
     </main>
       </BrowserRouter>
+      <Footer />
     </>
   )
 
