@@ -19,7 +19,7 @@ const NavBar = () => {
           </li>
 
         <li>
-          <Link to="/breed">Breed</Link>
+          <Link to="/browse">Browse</Link>
           </li>
 
         <li>
