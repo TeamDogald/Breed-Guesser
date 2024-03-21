@@ -10,8 +10,13 @@ Our application, Breed Guesser, is tailored for those who enjoy looking at pictu
 
 This application will use the **DOG API**. Below are the documentation and specific endpoints we intend to use.
 
+<<<<<<< HEAD
 - Link to API documentation: https://dog.ceo/dog-api/
 - https://api.tronalddump.io/tag/{TAG}
+=======
+- Link to API documentation: https://api.tronalddump.io/
+- https://www.tronalddump.io/tag/
+>>>>>>> origin/main
   - Retrieve qoutes based on their tag.
 - https://api.tronalddump.io/search/quote?query={USERINPUT}
   - Retrieve qoutes based on if the quote itself includes the word that the user searched for.
