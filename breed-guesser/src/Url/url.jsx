@@ -6,5 +6,5 @@
 
 //Display random multiple images from all dog collections
 // numbers can go all the way to 50
-`https://dog.ceo/api/breeds/image/random/3`
+`https://dog.ceo/api/breeds/image/random/8`
 
