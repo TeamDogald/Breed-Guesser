@@ -6,7 +6,7 @@ import NavBar from './Components/Navbar'
 import Breeds from './Pages/Breeds'
 import Home from './Pages/home'
 import Error from './Pages/error'
-import Footer from './Components/Footer'
+// import Footer from './Components/Footer'
 import Memory from './Games/memory'
 
 
@@ -31,7 +31,7 @@ function App() {
     
     </main>
       </BrowserRouter>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 
