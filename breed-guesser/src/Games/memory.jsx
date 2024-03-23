@@ -1,62 +1,17 @@
-import style from './style.module.css'
-import { useEffect, useState } from 'react'
-import handleFetch from '../utils/handleFetch'
-import Cards from '../Components/cards'
+import style from "./style.module.css";
+import Cards from "../Components/cards";
 
-
-const RandomSixDogsUrl = `https://dog.ceo/api/breeds/image/random/6`
-
-
-
-
-const Memory = () => {
-    const [dogPics, setDogPics] = useState([])
-    const [error, setError] = useState('')
-
-    useEffect(() => {
-        const doFetch = async () => {
-          
-            const [data, error] = await handleFetch(RandomSixDogsUrl)
-            if (error){
-                setError(error.message)
-            } else {
-                setDogPics(data.message)
-            }
-   
-        }
-        doFetch()
-    }, [])
-   
-
-    const newData = []
-    for (let i = 0; i < dogPics.length; i++) {
-        newData[i] = { id: i, src: dogPics[i], stat: ""}
-
-        // if(dogPics[i] === dogPics[i]){
-        //     id === id
-        // }
-    }
-   
-    console.log(newData)
-    // render the component
-    return (
-        <div className={ style.memoryContainer}>
-
-
-        
-        <div 
-        
-        >
+const Memory = ({ newData }) => {
+  return (
+    <div className={style.memoryContainer}>
+      <div>
         <h1 className={style.h1}>Match the Doggy Pair</h1>
         <div className={style.container}>
-        
-         <Cards newData={newData} />   
-
+          <Cards newData={newData} />
         </div>
-        </div>
-       
-         </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
 
-export default Memory
+export default Memory;

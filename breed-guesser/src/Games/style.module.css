@@ -11,6 +11,10 @@
     height: 100%; 
 }
 
+.h1 {
+    text-align: center;
+    margin-bottom: 1em;
+}
 .container {
     height: calc(100vh - 200px);
     width: 700px; 
@@ -21,10 +25,6 @@
     gap: 1em;
 }
 
-.h1 {
-    text-align: center;
-    margin-bottom: 1em;
-}
 
 .card {
     background-color: aqua; 
@@ -39,7 +39,7 @@
 }
 @keyframes hideCard{
 0%, 70% {
-    transform:  rotateY(0deg);
+    transform:  rotateY(0);
     }
 100% {
     transform: rotateY(180deg);
@@ -49,9 +49,9 @@
 .card img{
     max-width: 80%;
     max-height: 80%;
+    transition: transform 0.5s;
     transform: scale(0);
     animation: 5s hideImage linear;
-    transition: transform 0.5s;
 }
 @keyframes hideImage{
 0%, 70% {

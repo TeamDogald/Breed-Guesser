@@ -1,14 +1,14 @@
 // import Cards from "./cards";
-import style from '../Games/style.module.css'
+import style from "../Games/style.module.css";
 
-
-function CardComponent({ newData, id, handleClick }) {
-    const itemClass = newData.stat ? "active" + newData.stat: ""
-    return (
-        <div className={style.card + itemClass} onClick={() => handleClick(id)}>
-            <img src={newData.src} alt="" />
-        </div>
-    );
+function CardComponent({ doubledDogPics, id, handleClick }) {
+  const itemClass = doubledDogPics.stat ? "active" + doubledDogPics.stat : "";
+  console.log(itemClass);
+  return (
+    <div className={style.card + itemClass} onClick={() => handleClick(id)}>
+      <img src={doubledDogPics.src} alt="" />
+    </div>
+  );
 }
 
-export default CardComponent
+export default CardComponent;
