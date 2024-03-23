@@ -62,18 +62,18 @@
 }
 }
 
-.card.active{
+.active{
 transform: rotateY(0);
 }
 
-.card.wrong {
+.wrong {
     background-color: red;
 }
 
-.card.correct {
+.correct {
     background-color: green;
 }
 
-.card.active img{
+.active img{
     transform: scale(1);
 }

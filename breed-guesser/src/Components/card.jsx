@@ -1,14 +1,20 @@
 // import Cards from "./cards";
 import style from "../Games/style.module.css";
-
 function CardComponent({ doubledDogPics, id, handleClick }) {
-  const itemClass = doubledDogPics.stat ? "active" + doubledDogPics.stat : "";
-  console.log(itemClass);
+  // const itemClass = doubledDogPics.stat ? style.active + ' ' + style[`${doubledDogPics.stat}`] : "";
+  // console.log(itemClass);
   return (
-    <div className={style.card + itemClass} onClick={() => handleClick(id)}>
+    // Use string interpolation for condition styling
+    <div
+      className={`${style.card} ${
+        doubledDogPics.stat
+          ? `${style.active} ${style[`${doubledDogPics.stat}`]}`
+          : ""
+      }`}
+      onClick={(e) => handleClick(e, id)}
+    >
       <img src={doubledDogPics.src} alt="" />
     </div>
   );
 }
-
 export default CardComponent;
