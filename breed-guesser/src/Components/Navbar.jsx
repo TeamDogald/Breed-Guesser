@@ -6,7 +6,7 @@ import logo from '../images/dogLogo.jpg'
 const NavBar = () => {
   return (
     <nav>
-      <img src={logo} alt='Dog Logo' style={{width: '125px', height: '9vh'}}/>
+      <img src={logo} alt='Dog Logo' id='dog-logo'/>
       <span className="website-name">Breed Guesser</span>
       <ul id='navbar'>
       
@@ -18,9 +18,9 @@ const NavBar = () => {
           <Link to="/breeds">Breeds</Link>
           </li>
 
-        <li>
+        {/* <li>
           <Link to="/browse">Browse</Link>
-          </li>
+          </li> */}
 
         <li>
           <Link to="/games">Games</Link>

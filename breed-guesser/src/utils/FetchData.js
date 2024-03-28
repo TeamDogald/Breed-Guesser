@@ -1,5 +1,4 @@
 
-
 function FetchData() {
     const [data, setData] = useState([])
     useEffect(()=> {

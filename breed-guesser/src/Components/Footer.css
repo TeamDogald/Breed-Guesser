@@ -1,7 +1,7 @@
 .main-footer {
     color: rgb(213, 154, 59);
     background-color: aqua;
-    padding-top: 3em;
+    /* padding-top: 0rem; */
     width: 100%;
     position: fixed;
     bottom: 0;
