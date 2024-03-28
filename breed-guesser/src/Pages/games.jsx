@@ -1,34 +1,19 @@
-import React from "react"
-import { Link } from "react-router-dom"
-import Memory from "../Games/memory"
-
-
-
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Games = () => {
-return (
+  return (
     <div>
-        <ul>
-            <li>
-            <Link to='/Games/memory'>Memory Games</Link>
-
-            </li>
-            <li></li>
-        </ul>
-
+      <ul>
+        <li>
+          <Link to="/Games/memory">Memory Games</Link>
+        </li>
+        <li>
+          <Link to="/Games/slidingPuzzle">Sliding Puzzle</Link>
+        </li>
+      </ul>
     </div>
-    
-    
-    
-    
-    
-    
+  );
+};
 
-)
-
-
-}
-
-
-
-export default  Games
+export default Games;
