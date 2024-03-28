@@ -8,19 +8,17 @@ Our application, Breed Guesser, is tailored for those who enjoy looking at pictu
 
 ## API
 
-This application will use the **Tronald Dump API**. Below are the documentation and specific endpoints we intend to use.
+This application will use the **Dog API**. Below are the documentation and specific endpoints we intend to use.
 
-- Link to API documentation: https://api.tronalddump.io/
-- https://www.tronalddump.io/tag/
-  - Retrieve qoutes based on their tag.
-- https://api.tronalddump.io/search/quote?query={USERINPUT}
-  - Retrieve qoutes based on if the quote itself includes the word that the user searched for.
-- https://api.tronalddump.io/random/meme
-  - retrieves an image that's based on a random quote.
-- https://api.tronalddump.io/quote/{id}
-  - Retrieves the actual quote
-  - Retrieves the time the qoute was made
-  - Retrieves the source of the qoute.
+- Link to API documentation: https://dog.ceo/dog-api/
+- https://dog.ceo/api/breeds/image/random
+  - Retrieve random image of a dog
+- https://dog.ceo/api/breeds/image/random/{NUMBER}
+  - RRetrieves a certain number of random dog images.
+-  https://dog.ceo/api/breeds/list/all
+  - retrieves a list of all the breeds available
+- https://dog.ceo/api/breed/{BREED}/images
+  - Retrieves all the images pertaning to a certain breed
 
 No API key is required.
 
@@ -28,17 +26,17 @@ No API key is required.
 
 The core features of the application include:
 
-- Users can look up random quotes Donald Trump said.
-- Users can view random memes.
-- Users can search for a quote via tags or search bar.
+- Users can look at random pictures of dogs.
+- Users can play dog-related games.
+- Users can look at images related to a certain breed of dog.
 
 ## 🤔 Stretch User Stories
 
 If time permits, the following stretch features will be implemented in order of priority:
 
 - Users will be able to toggle between dark and light mode.
-- Users will be able to like and save their favorite quotes.
-- Users will be able to view their favorite quotes.
+- Users will be able to like and save their favorite dog pictures.
+- Users will be able to play a dog guessing game quiz.
 
 ## 📆 Timeline for reaching MVP in 1 week
 

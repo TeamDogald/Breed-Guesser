@@ -1,0 +1,9 @@
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.home-img {
+    /* min-width: 7rem; */
+    width: 5rem;
+}

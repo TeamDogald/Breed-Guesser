@@ -3,7 +3,7 @@
 import './Browse.css'
 const Browse = () => <h1>Here's some picture</h1>;
 
-
+//we should delete this page
 
 
 
