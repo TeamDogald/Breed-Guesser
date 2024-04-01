@@ -9,11 +9,10 @@ const Games = () => {
 return (
     <div>
         <ul>
-            <li>
+            <li id='gameurl'>
             <Link to='/Games/memory'>Memory Games</Link>
 
             </li>
-            <li></li>
         </ul>
 
     </div>
