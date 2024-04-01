@@ -1,5 +1,7 @@
 import { GRID_SIZE, TILE_COUNT, BOARD_SIZE } from "./constants";
 import { canSwap, shuffle, swap, isSolved } from "./helper";
+import { useState } from "react";
+import Tile from "./tiles";
 function Boards() {
   const [tiles, setTiles] = useState([...Array(TILE_COUNT).keys()]);
   const [isStarted, setIsStarted] = useState(false);
@@ -10,8 +12,8 @@ function Boards() {
     setTiles(shuffledTiles);
   };
 
-  const swapTiles = (titleIndex) => {
-    if (canSwap(titleIndex, tiles.indexOf(tiles.length - 1))) {
+  const swapTiles = (tileIndex) => {
+    if (canSwap(tileIndex, tiles.indexOf(tiles.length - 1))) {
       const swappedTiles = swap(
         tiles,
         tileIndex,
@@ -50,10 +52,10 @@ function Boards() {
           <Tile
             key={tile}
             index={index}
-            imgUrl={imgUrl}
+            // imgUrl={imgUrl}
             tile={tile}
-            width={pieceWidth}
-            height={pieceHeight}
+            width={PieceWidth}
+            height={PieceHeight}
             handleTileClick={handleTileClick}
           />
         ))}
@@ -66,6 +68,9 @@ function Boards() {
       )}
     </>
   );
+
+  // return <h1>breed</h1>
+
 }
 
 export default Boards;
