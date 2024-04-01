@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import handleFetch from "../utils/handleFetch";
+import handleFetch from '../Utils/handleFetch.js'
+
 
 const Breed = () => {
     const { breed } = useParams()

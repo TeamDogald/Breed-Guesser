@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import handleFetch from '../utils/handleFetch.js'
+import handleFetch from '../Utils/handleFetch.js'
 
 const randDogs = 'https://dog.ceo/api/breeds/image/random'
 
