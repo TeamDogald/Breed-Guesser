@@ -1,9 +1,10 @@
 * {
-    background-color: rgb(255, 191, 54);
-
+    color: rgb(255, 191, 54);
+    
 }
 
 body, html {
+    
     width: 100%;
     height: 100%;
     padding: 0px;

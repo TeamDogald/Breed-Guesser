@@ -1,0 +1,17 @@
+
+
+#home-content {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+
+
+#img-div {
+    max-height: 30rem;
+    min-height: 30rem;
+    /* x-width: 30rem; */
+    height: fit-content;
+    /* width: 5rem; */
+}
