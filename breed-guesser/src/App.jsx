@@ -20,19 +20,19 @@ const App = () => {
 
       <NavBar />
 
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/home' element={<Home />} />
-          <Route path='/Games' element={<Games />} />
-          <Route path="/Games/Memory" element={<Memory />} />
-          <Route path='/breeds' element={<Breeds />} />
-          <Route path="/breeds/:breed" element={<Breed />} />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/home' element={<Home />} />
+        <Route path='/Games' element={<Games />} />
+        <Route path="/Games/Memory" element={<Memory />} />
+        <Route path='/breeds' element={<Breeds />} />
+        <Route path="/breeds/:breed" element={<Breed />} />
 
 
-          <Route path='/browse' element={<Browse />} />
-          <Route path='*' element={<PageNotFound />} />
+        <Route path='/browse' element={<Browse />} />
+        <Route path='*' element={<PageNotFound />} />
 
-        </Routes>
+      </Routes>
 
 
       <Footer />
@@ -40,9 +40,6 @@ const App = () => {
     </>
   )
 
-      {/* <Footer /> */}
-    </>
-  );
 }
 
 export default App;

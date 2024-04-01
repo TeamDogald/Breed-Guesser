@@ -4,11 +4,11 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <footer id="main-footer">
-      <p>Github Repo</p>
+      <a href="https://github.com/TeamDogald/Breed-Guesser">Github Repo</a>
       <div id="footer-column">
         <p>By: Berlineda Faurelus & Nico Aroca</p>
       </div>
-      <p>The Dog API</p>        
+      <a href="https://dog.ceo/dog-api/">The Dog API</a>
     </footer>
   );
 };
