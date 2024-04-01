@@ -5,6 +5,8 @@ nav {
     height: 7rem;
     background-color: rgb(26, 12, 0);
     justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
     /* padding: 3rem; */
 
 }
@@ -13,6 +15,7 @@ div #logo {
     width: auto;
     align-items: center;
     flex-direction: row;
+    margin-left: 5rem;
 
 
 }
@@ -24,12 +27,13 @@ div #logo {
     border-top-right-radius: 100%;
     border-bottom-right-radius: 100%;
     border-bottom-left-radius: 100%;
+
 }
 #navbar {
     display: flex;
     flex-direction: row;
    
-    
+    margin-right: 5rem;
     /* justify-content: center; */
 }
 
@@ -59,7 +63,6 @@ div #logo {
     left: 0px;
 }
 .website-name {
-    /* margin-left: 10px;  */
     color: rgb(213, 154, 59); 
     font-size: 45px; 
 }

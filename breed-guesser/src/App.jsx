@@ -17,7 +17,7 @@ const App = () => {
     <>
 
       <NavBar />
-      <main>
+
         <Routes>
           <Route index element={<Home />} />
           <Route path='/home' element={<Home />} />
@@ -33,8 +33,8 @@ const App = () => {
         </Routes>
 
 
-      </main>
-      {/* <Footer /> */}
+      <Footer />
+
     </>
   )
 

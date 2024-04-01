@@ -1,7 +1,7 @@
 import React from 'react';
-import './NavbarStyles.css'
+import './Navbar.css'
 import { Link } from 'react-router-dom';
-import logo from '../images/dogLogo.jpg'
+import logo from '../Images/dogLogo.jpg'
 
 const NavBar = () => {
   return (
@@ -13,15 +13,15 @@ const NavBar = () => {
       
       <ul id='navbar'>
         <li > 
-          <Link to="/">HOME</Link>
+          <Link to="/">home</Link>
         </li>
 
         <li>
-          <Link to="/Games">GAMES</Link>
+          <Link to="/Games">games</Link>
         </li>
 
         <li>
-          <Link to="/Breeds">BREEDS</Link>
+          <Link to="/Breeds">breeds</Link>
         </li>
       
       </ul>
