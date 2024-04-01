@@ -1,30 +1,28 @@
 import React from 'react';
-import './NavbarStyles.css'
+import './Navbar.css'
 import { Link } from 'react-router-dom';
-import logo from '../images/dogLogo.jpg'
+import logo from '../Images/dogLogo.jpg'
 
 const NavBar = () => {
   return (
     <nav>
-      <img src={logo} alt='Dog Logo' id='dog-logo'/>
-      <span className="website-name">Breed Guesser</span>
-      <ul id='navbar'>
+      <div id='logo'>
+        <img src={logo} alt='logo' id='dog-logo'/>
+        <span className="website-name">Breed Guesser</span>
+      </div>
       
+      <ul id='navbar'>
         <li > 
-          <Link to="/">Home</Link>
-          </li>
+          <Link to="/">home</Link>
+        </li>
 
         <li>
-          <Link to="/breeds">Breeds</Link>
-          </li>
-
-        {/* <li>
-          <Link to="/browse">Browse</Link>
-          </li> */}
+          <Link to="/Games">games</Link>
+        </li>
 
         <li>
-          <Link to="/games">Games</Link>
-          </li>
+          <Link to="/Breeds">breeds</Link>
+        </li>
       
       </ul>
     </nav>

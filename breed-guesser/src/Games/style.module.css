@@ -1,5 +1,9 @@
 /* style.module.css */
 
+#cardsContainer {
+    height: 10rem;
+}
+
 .memoryContainer {
     margin: 0;
     padding: 0;
@@ -27,11 +31,11 @@
 
 
 .card {
-    background-color: aqua; 
+    background-color: rgb(255, 191, 54); 
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 5px;
+    border-radius: 10px;
     transform: rotateY(180deg);
     animation: 5s hideCard linear;
     transition: transform 0.5s;

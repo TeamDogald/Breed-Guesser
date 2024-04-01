@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
-import handleFetch from '../utils/handleFetch.js'
+import handleFetch from '../Utils/handleFetch.js'
+import './Home.css'
 
 const randDogs = 'https://dog.ceo/api/breeds/image/random'
 
@@ -15,13 +16,21 @@ const Home = () => {
       }
       getImg()
    }, [])
+   const stuff = img.split('/')
+   let name = stuff[4]
 
-
+   name = name.split('-').map((word) => word[0].toUpperCase() + word.slice(1)).join(' ')
+      
    return (
-      <div id='home-content'>
-        <h1>Hello! Welcome to Breed Guesser!</h1>
-        
-        <img src={img} alt="doggy" id='home-img'/>
+      <div id='home'>
+         <div id='home-content'>
+            <h1>Hello! Welcome to Breed Guesser!</h1>
+            <div id="img-div">
+               <img src={img} alt="doggy" id='home-img'/>
+               <p>{name}</p>
+            </div>
+
+         </div>
       </div>
    ) 
 

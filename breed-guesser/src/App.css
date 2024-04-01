@@ -1,3 +1,24 @@
+* {
+    color: rgb(255, 191, 54);
+    
+}
+
+body, html {
+    
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+#gameurl {
+    font-size: large;
+}
+
+
+
+
+
 /* .card {
     background-color: brown;
    

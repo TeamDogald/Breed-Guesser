@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import handleFetch from "../utils/handleFetch";
+import handleFetch from '../Utils/handleFetch.js'
+
 
 const defaultDog = { 'message': 'https://images.dog.ceo/breeds/hound-walker/n02089867_1764.jpg', 'status': 'success' }
 
