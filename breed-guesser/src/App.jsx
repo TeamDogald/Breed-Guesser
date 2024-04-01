@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Games from './Pages/games'
@@ -13,13 +14,14 @@ import Memory from './Games/memory'
 
 const App = () => {
 
+
   return (
     <>
 
       <NavBar />
 
         <Routes>
-          <Route index element={<Home />} />
+          <Route path='/' element={<Home />} />
           <Route path='/home' element={<Home />} />
           <Route path='/Games' element={<Games />} />
           <Route path="/Games/Memory" element={<Memory />} />
@@ -38,7 +40,9 @@ const App = () => {
     </>
   )
 
-
+      {/* <Footer /> */}
+    </>
+  );
 }
 
-export default App
+export default App;

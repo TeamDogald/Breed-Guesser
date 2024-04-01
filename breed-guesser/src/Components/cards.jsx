@@ -7,7 +7,7 @@ const Cards = () => {
   const [dogPics, setDogPics] = useState([]);
   const [error, setError] = useState("");
   const [prevSelected, setPrevSelected] = useState(-1);
-  const [firstRender, setFirstRender] = useState(true);
+  // const [firstRender, setFirstRender] = useState(true);
   useEffect(() => {
     const doFetch = async () => {
       const [data, error] = await handleFetch(RandomSixDogsUrl);
