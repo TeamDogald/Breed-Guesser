@@ -14,7 +14,7 @@ This application will use the **Dog API**. Below are the documentation and speci
 - https://dog.ceo/api/breeds/image/random
   - Retrieve random image of a dog
 - https://dog.ceo/api/breeds/image/random/{NUMBER}
-  - RRetrieves a certain number of random dog images.
+  - Retrieves a certain number of random dog images.
 -  https://dog.ceo/api/breeds/list/all
   - retrieves a list of all the breeds available
 - https://dog.ceo/api/breed/{BREED}/images
