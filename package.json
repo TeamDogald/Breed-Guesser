@@ -1,5 +1,5 @@
 {
-  "homepage": "https://<username>.github.io/<repository>",
+  "homepage": "https://Team-Dogald.github.io/Breed-Guesser",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
