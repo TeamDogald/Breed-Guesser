@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import CardComponent from "./card";
-import style from "../Games/style.module.css";
-import handleFetch from '../Utils/handleFetch.js'
+import CardComponent from "./Card.jsx";
+// import style from "./style.module.css";
+import handleFetch from '../../Utils/handleFetch.js'
 const RandomSixDogsUrl = `https://dog.ceo/api/breeds/image/random/6`;
 const Cards = () => {
   const [dogPics, setDogPics] = useState([]);

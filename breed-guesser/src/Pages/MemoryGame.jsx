@@ -1,5 +1,5 @@
-import style from "./style.module.css";
-import Cards from "../Components/cards";
+// import style from "./style.module.css";
+import Cards from "../Components/MemoryGame/Cards";
 
 const Memory = ({ newData }) => {
   return (

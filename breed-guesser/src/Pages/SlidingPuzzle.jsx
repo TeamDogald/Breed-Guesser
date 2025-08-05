@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import handleFetch from "../utils/handleFetch";
-import Boards from "../Components/boards";
+import handleFetch from "../Utils/handleFetch";
+import Boards from "../Components/PuzzleGame/Boards";
 
 const RandomImgUrl = `https://dog.ceo/api/breeds/image/random`;
 
@@ -10,12 +10,9 @@ const SlidingPuzzle = () => {
 
   useEffect(() => {
     const doFetch = async () => {
-      try {
-        const response = await handleFetch(RandomImgUrl);
-        setImgUrl(response.data.message);
-      } catch (error) {
-        setError(error.message);
-      }
+      const [data, fetchError] = await handleFetch(RandomImgUrl);
+      if (data) setImgUrl(data.message);
+      if (fetchError) setError(fetchError);
     };
     doFetch();
   }, []);
@@ -23,7 +20,8 @@ const SlidingPuzzle = () => {
   return (
     <div className="puzzleContainer">
       <h1>Sliding Puzzle</h1>
-      <Boards imgUrl={imgUrl} />
+      {error && <p style={{ color: "red" }}>{error}</p>}
+      {imgUrl && <Boards imgUrl={imgUrl} />}
     </div>
   );
 };

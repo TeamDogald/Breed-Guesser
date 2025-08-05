@@ -1,11 +1,12 @@
-import { GRID_SIZE, TILE_COUNT, BOARD_SIZE } from "./constants";
-import { canSwap, shuffle, swap, isSolved } from "./helper";
+import { GRID_SIZE, TILE_COUNT, BOARD_SIZE } from "../../Utils/puzzleConstants";
+import { canSwap, shuffle, swap, isSolved } from "../../Utils/puzzleHelper";
 import { useState } from "react";
-import Tile from "./tiles";
-function Boards() {
+import Tile from "./Tile";
+import "./Boards.css";
+
+function Boards({ imgUrl }) {
   const [tiles, setTiles] = useState([...Array(TILE_COUNT).keys()]);
   const [isStarted, setIsStarted] = useState(false);
-  console.log("is started", isStarted);
 
   const shuffleTiles = () => {
     const shuffledTiles = shuffle(tiles);
@@ -13,12 +14,9 @@ function Boards() {
   };
 
   const swapTiles = (tileIndex) => {
-    if (canSwap(tileIndex, tiles.indexOf(tiles.length - 1))) {
-      const swappedTiles = swap(
-        tiles,
-        tileIndex,
-        tiles.indexOf(tiles.length - 1)
-      );
+    const emptyIndex = tiles.indexOf(TILE_COUNT - 1);
+    if (canSwap(tileIndex, emptyIndex)) {
+      const swappedTiles = swap(tiles, tileIndex, emptyIndex);
       setTiles(swappedTiles);
     }
   };
@@ -38,39 +36,32 @@ function Boards() {
 
   const PieceWidth = Math.round(BOARD_SIZE / GRID_SIZE);
   const PieceHeight = Math.round(BOARD_SIZE / GRID_SIZE);
-  const style = {
-    width: BOARD_SIZE,
-    height: BOARD_SIZE,
-  };
 
   const hasWon = isSolved(tiles);
 
   return (
-    <>
-      <ul style={style} className="board">
+    <div>
+      <ul className="board" style={{ width: BOARD_SIZE, height: BOARD_SIZE }}>
         {tiles.map((tile, index) => (
           <Tile
             key={tile}
             index={index}
-            // imgUrl={imgUrl}
             tile={tile}
             width={PieceWidth}
             height={PieceHeight}
+            imgUrl={imgUrl}
             handleTileClick={handleTileClick}
           />
         ))}
       </ul>
       {hasWon && isStarted && <div>Puzzle solved 🧠 🎉</div>}
       {!isStarted ? (
-        <button onClick={() => handleStartClick()}>Start game</button>
+        <button onClick={handleStartClick}>Start game</button>
       ) : (
-        <button onClick={() => handleShuffleClick()}>Restart game</button>
+        <button onClick={handleShuffleClick}>Restart game</button>
       )}
-    </>
+    </div>
   );
-
-  // return <h1>breed</h1>
-
 }
 
 export default Boards;

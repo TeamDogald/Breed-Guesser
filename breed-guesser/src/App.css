@@ -1,5 +1,6 @@
 * {
-    color: rgb(255, 191, 54);
+    color: rgb(213, 154, 59);
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     
 }
 
@@ -16,16 +17,8 @@ body, html {
 }
 
 
-
-
-
-/* .card {
-    background-color: brown;
-   
-}
-
 body {
-    padding: 0;
     margin: 0;
-    box-sizing: border-box;
-} */
+    padding: 0;
+  }
+  

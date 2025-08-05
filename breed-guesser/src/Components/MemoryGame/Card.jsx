@@ -1,5 +1,5 @@
 // import Cards from "./cards";
-import style from "../Games/style.module.css";
+// import style from "./style.module.css";
 function CardComponent({ doubledDogPics, id, handleClick }) {
   // const itemClass = doubledDogPics.stat ? style.active + ' ' + style[`${doubledDogPics.stat}`] : "";
   // console.log(itemClass);
