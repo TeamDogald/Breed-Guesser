@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import handleFetch from "../Utils/handleFetch";
 import Boards from "../Components/PuzzleGame/Boards";
+import "./SlidingPuzzle.css";
 
 const RandomImgUrl = `https://dog.ceo/api/breeds/image/random`;
 

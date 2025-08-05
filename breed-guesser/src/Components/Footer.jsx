@@ -6,9 +6,10 @@ const Footer = () => {
     <footer id="main-footer">
       <a href="https://github.com/TeamDogald/Breed-Guesser">Github Repo</a>
       <div id="footer-column">
-        <p>By: Berlineda Faurelus & Nico Aroca</p>
+        <p>By: Nico Aroca & Berlineda Faurelus</p>
+        <p>(Team Dogald)</p>
       </div>
-      <a href="https://dog.ceo/dog-api/">The Dog API</a>
+      <a href="https://dog.ceo/dog-api/">Dog API</a>
     </footer>
   );
 };

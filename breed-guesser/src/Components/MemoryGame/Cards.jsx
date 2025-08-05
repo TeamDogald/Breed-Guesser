@@ -1,84 +1,97 @@
-import { useState, useEffect } from "react";
-import CardComponent from "./Card.jsx";
-// import style from "./style.module.css";
-import handleFetch from '../../Utils/handleFetch.js'
+import { useEffect, useState } from "react";
+import CardComponent from "./Card";
+import handleFetch from "../../Utils/handleFetch";
+
 const RandomSixDogsUrl = `https://dog.ceo/api/breeds/image/random/6`;
-const Cards = () => {
+
+const Cards = ({ onScore, onMove, onWin, resetTrigger }) => {
   const [dogPics, setDogPics] = useState([]);
-  const [error, setError] = useState("");
-  const [prevSelected, setPrevSelected] = useState(-1);
-  // const [firstRender, setFirstRender] = useState(true);
+  const [flipped, setFlipped] = useState([]);
+  const [matched, setMatched] = useState([]);
+  const [animating, setAnimating] = useState(false); // cooldown lock
+
+  const initializeCards = async () => {
+    const [data, error] = await handleFetch(RandomSixDogsUrl);
+    if (error) return;
+    const pics = data.message;
+    const cards = pics.concat(pics) // duplicate for matching
+      .map((src, index) => ({ id: index, src, stat: "" }))
+      .sort(() => Math.random() - 0.5);
+    setDogPics(cards);
+    setFlipped([]);
+    setMatched([]);
+    setAnimating(false);
+  };
+
   useEffect(() => {
-    const doFetch = async () => {
-      const [data, error] = await handleFetch(RandomSixDogsUrl);
-      if (error) {
-        setError(error.message);
-      } else {
-        setDogPics(data.message);
-      }
-    };
-    doFetch();
-  }, []);
-  let doubledDogPics;
-  //Prevent dublicating over and over by checking if we duplicated yet.
-  //  Duplication was happening because everytime the dogPics array changed, the code to double
-  // the dog pics was running again
-  if (dogPics.length < 12) {
-    const newData = [];
-    for (let i = 0; i < dogPics.length; i++) {
-      //Duplicating but still making sure the duplicates have different id's
-      newData[i] = { id: i, src: dogPics[i], stat: "" };
-      newData[i + 6] = { id: i + 6, src: dogPics[i], stat: "" };
-    }
-    doubledDogPics = newData;
-  } else {
-    doubledDogPics = dogPics;
-  }
-  console.log(doubledDogPics);
-  function check(current) {
-    console.log(current, prevSelected);
-    //Checking if the picture is the same instead of if the id is the same
-    if (doubledDogPics[current].src === doubledDogPics[prevSelected].src) {
-      doubledDogPics[current].stat = "correct";
-      doubledDogPics[prevSelected].stat = "correct";
-      setDogPics([...doubledDogPics]);
-      console.log(doubledDogPics[current].stat);
-      setPrevSelected(-1);
-    } else {
-      doubledDogPics[current].stat = "wrong";
-      console.log("checking stat if wrong", doubledDogPics[prevSelected].stat);
-      doubledDogPics[prevSelected].stat = "wrong";
-      setDogPics([...doubledDogPics]);
+    initializeCards();
+  }, [resetTrigger]);
+
+  const handleClick = (index) => {
+    if (animating || flipped.includes(index) || matched.includes(index)) return;
+  
+    const newFlipped = [...flipped, index];
+    const updatedPics = [...dogPics];
+    updatedPics[index].stat = "active";
+    setDogPics(updatedPics);
+    setFlipped(newFlipped);
+  
+    if (newFlipped.length === 2) {
+      setAnimating(true); // block clicks temporarily
+  
+      // Delay so the second card is visible before comparison
       setTimeout(() => {
-        doubledDogPics[current].stat = "";
-        doubledDogPics[prevSelected].stat = "";
-        setDogPics([...doubledDogPics]);
-        setPrevSelected(-1);
-      }, 1000);
+        onMove();
+  
+        const [first, second] = newFlipped;
+  
+        if (dogPics[first].src === dogPics[second].src) {
+          // Match found
+          updatedPics[first].stat = "correct";
+          updatedPics[second].stat = "correct";
+          setMatched([...matched, first, second]);
+          onScore();
+          setDogPics(updatedPics);
+          setFlipped([]);
+          setAnimating(false);
+  
+          if (matched.length + 2 === dogPics.length) {
+            onWin();
+          }
+        } else {
+          // No match
+          updatedPics[first].stat = "wrong";
+          updatedPics[second].stat = "wrong";
+          setDogPics(updatedPics);
+  
+          // Wait briefly before flipping back
+          setTimeout(() => {
+            updatedPics[first].stat = "";
+            updatedPics[second].stat = "";
+            setDogPics([...updatedPics]);
+            setFlipped([]);
+            setAnimating(false);
+          }, 500); // keep cards flipped wrong for a moment
+        }
+      }, 700); // small delay to let second card flip
     }
-  }
-  function handleClick(e, id) {
-    console.log("Clicked card id:", id);
-    if (prevSelected === -1 && doubledDogPics[id].stat !== "active") {
-      doubledDogPics[id].stat = "active";
-      setDogPics([...doubledDogPics]);
-      console.log("Clicked card stat:", doubledDogPics[id].stat);
-      setPrevSelected(id);
-    } else {
-      check(id);
-    }
-  }
+  };
+  
+  
+
   return (
-    <div className={style.container}>
-      {doubledDogPics.map((item, index) => (
+    <div className="memory-grid">
+      {dogPics.map((item, index) => (
         <CardComponent
-          key={index}
-          doubledDogPics={item}
+          key={item.id}
           id={index}
+          src={item.src}
+          stat={item.stat}
           handleClick={handleClick}
         />
       ))}
     </div>
   );
 };
+
 export default Cards;

@@ -1,0 +1,63 @@
+.breed-guesser-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: center;
+  padding: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.score {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.actions {
+  margin-top: 1.5rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid #333;
+  background-color: #f0f0f0;
+  margin: 0 0.3rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.next-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+}
+
+.next-btn:hover {
+  background-color: #45a045;
+}
+
+.learn-more-btn {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+}
+
+.learn-more-btn:hover {
+  background-color: #1976d2;
+}
+
+.error {
+  color: red;
+  font-weight: 700;
+}
