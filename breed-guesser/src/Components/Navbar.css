@@ -1,86 +1,79 @@
-nav { 
+nav.main-nav {
     display: flex;
-    margin: 0px;
-    width: 100%;
+    justify-content: space-between;
+    align-items: center;
     height: 7rem;
     background-color: rgb(85, 40, 1);
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-    padding: 3rem;
+    padding: 0 3rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
     position: sticky;
-
-}
-div #logo {
+    top: 0;
+    z-index: 999;
+  }
+  
+  #logo {
     display: flex;
-    width: auto;
     align-items: center;
-    flex-direction: row;
-    margin-left: 5rem;
-
-
-}
-
-#dog-logo{
-    max-height: 4rem; 
+    margin-left: 0;
+  }
+  
+  #dog-logo {
+    max-height: 4rem;
     margin-right: 1rem;
-    border-top-left-radius: 100%;
-    border-top-right-radius: 100%;
-    border-bottom-right-radius: 100%;
-    border-bottom-left-radius: 100%;
-
-}
-#navbar {
+    border-radius: 100%;
+  }
+  
+  .website-name {
+    color: rgb(255, 195, 98);
+    font-size: 45px;
+    font-weight: 600;
+  }
+  
+  /* Menu Styles */
+  #navbar {
     display: flex;
     flex-direction: row;
-   
-    margin-right: 5rem;
-    /* justify-content: center; */
-}
-
-#navbar li{
-    display: flex;
-    /* list-style: none; */
+    list-style: none;
+    /* margin-right: 5rem; */
+  }
+  
+  #navbar li {
     padding: 20px;
-}
-#navbar li a{
-    /* text-decoration: none; */
+  }
+  
+  #navbar li a {
     font-size: 1.3rem;
     font-weight: 600;
     color: rgb(255, 195, 98);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
     transition: 0.3s ease-in-out;
-}
-#navbar li a:hover{
+  }
+  
+  #navbar li a:hover {
     color: white;
-}
-
-#navbar li a:hover::after{
-    content: "";
-    width: 30%;
-    height: 2px;
-    background-color:rgb(255, 195, 98);
-    position: absolute;
-    bottom: -4px;
-    left: 0px;
-}
-.website-name {
-    color: rgb(255, 195, 98); 
-    font-size: 45px; 
-}
-
-.hamburger {
+    border-bottom: 2px solid rgb(255, 195, 98);
+  }
+  
+  #navbar li a.active {
+    border-bottom: 2px solid white;
+  }
+  
+  /* Hamburger */
+  .hamburger {
     display: none;
-    font-size: 2rem;
+    font-size: 3rem;
     color: rgb(255, 195, 98);
     background: none;
     border: none;
-    margin-right: 2rem;
     cursor: pointer;
   }
   
+  /* Responsive styles */
   @media screen and (max-width: 768px) {
     .hamburger {
       display: block;
+      /* margin-right: 2rem; */
     }
   
     #navbar {
@@ -91,6 +84,9 @@ div #logo {
       right: 0;
       background-color: rgb(85, 40, 1);
       width: 100%;
+      text-align: center;
+      margin: 0;
+      padding: 1rem 0;
     }
   
     #navbar.open {
@@ -99,17 +95,14 @@ div #logo {
   
     #navbar li {
       padding: 1rem;
-      text-align: center;
-    }
-  
-    nav {
-      flex-direction: row;
-      justify-content: space-between;
-      padding: 0 1rem;
     }
   
     .website-name {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
+    }
+  
+    nav.main-nav {
+      padding: 0 1rem;
     }
   }
   

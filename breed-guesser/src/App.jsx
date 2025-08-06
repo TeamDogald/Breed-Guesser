@@ -9,6 +9,7 @@ import Footer from './Components/Footer'
 import Memory from './Pages/MemoryGame'
 import SlidingPuzzle from './Pages/SlidingPuzzle'
 import BreedGuesser from './Pages/BreedGuesser'
+import ScrollToTop from './Components/ScrollToTop'
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
       <div id="layout">
 
         <NavBar />
+        <ScrollToTop />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='games' element={<Games />} />

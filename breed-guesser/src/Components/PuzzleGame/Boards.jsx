@@ -54,12 +54,18 @@ function Boards({ imgUrl }) {
           />
         ))}
       </ul>
-      {hasWon && isStarted && <div>Puzzle solved 🧠 🎉</div>}
-      {!isStarted ? (
-        <button onClick={handleStartClick}>Start game</button>
-      ) : (
-        <button onClick={handleShuffleClick}>Restart game</button>
-      )}
+      <div className="puzzle-btns">
+        {hasWon && isStarted && <div>Puzzle solved 🧠 🎉</div>}
+        {!isStarted ? (
+          <div>
+            <button className="puzzle-btn" onClick={handleStartClick}>Start game</button>
+          </div>
+        ) : (
+          <div>
+            <button className="puzzle-btn" onClick={handleShuffleClick}>Restart game</button>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

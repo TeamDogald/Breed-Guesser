@@ -1,6 +1,15 @@
 import { useMemo } from "react";
+import "./GuessCard.css";
 
-export default function GuessCard({ breed, image, breeds, onGuess, loadingImages, guessMade, lastGuessCorrect }) {
+export default function GuessCard({
+  breed,
+  image,
+  breeds,
+  onGuess,
+  loadingImages,
+  guessMade,
+  lastGuessCorrect,
+}) {
   // Get 3 random wrong breed options (exclude current correct breed)
   const options = useMemo(() => {
     if (!breeds || breeds.length < 4) return [];
@@ -13,40 +22,31 @@ export default function GuessCard({ breed, image, breeds, onGuess, loadingImages
   }, [breed, breeds]);
 
   return (
-    <div>
+    <div className="guesscard-container">
       <img
         src={image}
         alt={`A ${breed} dog`}
-        style={{ maxWidth: "100%", borderRadius: 12, marginBottom: 20 }}
+        className="guesscard-img"
       />
-      <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 10 }}>
+      <div className="guesscard-options">
         {options.map((option) => {
           const isCorrect = option === breed;
-          let bgColor = "white";
 
+          let classes = "guesscard-btn";
           if (guessMade) {
-            if (option === breed) {
-              bgColor = "#4caf50"; // green correct
-            } else{
-              bgColor = "#f44336"; // red wrong
-            }
+            classes += isCorrect
+              ? " correct"
+              : " incorrect";
           }
+
+          const disabled = guessMade || loadingImages[option];
 
           return (
             <button
               key={option}
               onClick={() => onGuess(option)}
-              disabled={guessMade || loadingImages[option]}
-              style={{
-                padding: "0.5rem 1rem",
-                borderRadius: 8,
-                cursor: guessMade ? "default" : loadingImages[option] ? "not-allowed" : "pointer",
-                opacity: loadingImages[option] ? 0.5 : 1,
-                backgroundColor: bgColor,
-                border: "1px solid #ccc",
-                color: bgColor !== "white" ? "white" : "black",
-                fontWeight: guessMade && isCorrect ? "bold" : "normal",
-              }}
+              className={classes}
+              disabled={disabled}
             >
               {option}
             </button>

@@ -38,8 +38,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(85, 40, 1); 
-  color: rgb(255, 195, 98); 
+  background-color: #fff3e0; 
+  border: 2px solid rgb(213, 154, 59);
+  color: #5c2d00; 
   padding: 0.75rem;
   border-radius: 8px;
   text-decoration: none;
@@ -75,21 +76,18 @@
 
 /* "See more" button styling */
 .see-more {
-  margin-top: auto; /* push to bottom */
-  background: rgb(255, 195, 98);
-  color: rgb(85, 40, 1);
-  padding: 0.35rem 0.7rem;
-  border-radius: 4px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  text-align: center;
-  width: 100%;
-  box-sizing: border-box;
-  transition: background-color 0.25s ease;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: rgb(213, 154, 59);
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s ease-in-out;
 }
 
 .see-more:hover {
-  background: white;
+  background-color: rgb(175, 120, 45);
 }
 
 /* Loading placeholder box */

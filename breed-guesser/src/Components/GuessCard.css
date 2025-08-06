@@ -1,0 +1,47 @@
+.guesscard-container {
+  text-align: center;
+}
+
+.guesscard-img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.guesscard-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.guesscard-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  font-weight: normal;
+  transition: all 0.2s ease-in-out;
+}
+
+.guesscard-btn:hover:not(:disabled) {
+  background-color: #eee;
+}
+
+.guesscard-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.guesscard-btn.correct {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+}
+
+.guesscard-btn.incorrect {
+  background-color: #f44336;
+  color: white;
+}
