@@ -8,9 +8,7 @@ Created by [Nico Aroca](https://github.com/tailsmster) and [Berlineda Faurelus](
 
 ## 🌐 Site URL
 
-> https://teamdogald.github.io/Breed-Guesser/
-
----
+https://teamdogald.github.io/Breed-Guesser/
 
 
 ##  🖼️ Screenshots
