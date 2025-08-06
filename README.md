@@ -1,5 +1,5 @@
 # 🐶 Breed Guesser
-Created by [Nico Aroca](https://github.com/tailsmster) and [Berlineda Faurelus](https://github.com/Faurelus).
+Created by [Nico Aroca](https://github.com/tailsmonster) and [Berlineda Faurelus](https://github.com/Faurelus).
 
 
 ## 🚀 Mission statement
