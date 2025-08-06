@@ -28,6 +28,7 @@
   margin: 0 auto;
   padding: 1rem;
   margin-bottom: 5rem;
+  
 }
 
 .puzzle-container button {
@@ -40,10 +41,12 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: background 0.2s ease-in-out, transform 0.1s ease;
+  transition: background 0.2s ease-in-out, transform 0.2s ease;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, .2);
+
 }
 
 .puzzle-container button:hover {
   background-color: rgb(175, 120, 45);
-  transform: translateY(-1px);
+  transform: translateY(-1px), scale(1.02);
 }

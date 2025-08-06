@@ -91,18 +91,34 @@ export default function BreedGuesser() {
         guessMade={guessMade}
         lastGuessCorrect={lastGuessCorrect}
       />
+      <div>
+        {guessMade && (
+          <div className="guesser-result score">
+            {lastGuessCorrect ? (
+              <h3>Correct! 🎉</h3>
+            ) : (
+              <h3>Ooof! 😔</h3>
+            )}
+          </div>
+        )}
 
-      {guessMade && (
-        <div className="actions">
-          <button className="btn next-btn" onClick={handleNext}>
-            Next Question
-          </button>
 
-          <Link to={`/breeds/${currentBreed}`} className="btn learn-more-btn">
-            Learn more about {currentBreed}
-          </Link>
-        </div>
-      )}
+        {guessMade && (
+          <div className="actions">
+            <div className="next-btn" onClick={handleNext}>
+              Next Question
+            </div>
+
+            <br />
+
+            <Link  className="learn-more-btn" to={`/breeds/${currentBreed}`}>
+              View More {currentBreed} Pictures!
+            </Link>
+
+          </div>
+        )}
+
+      </div>
     </div>
   );
 }

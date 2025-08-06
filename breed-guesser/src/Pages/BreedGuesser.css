@@ -16,47 +16,51 @@
   font-size: 1.2rem;
   text-align: center;
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .actions {
   margin-top: 1.5rem;
-}
-
-.btn {
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  border: 1px solid #333;
-  background-color: #f0f0f0;
-  margin: 0 0.3rem;
-  font-weight: 600;
-  text-decoration: none;
-  color: #333;
-  transition: background-color 0.2s ease;
-}
-
-.btn:hover {
-  background-color: #ddd;
+  text-align: center;
 }
 
 .next-btn {
-  background-color: #4caf50;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 1rem;
+  background-color: #05b80b;
   color: white;
-  border: none;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, .2);
+
 }
 
 .next-btn:hover {
-  background-color: #45a045;
+  background-color: #119411;
+  transform: scale(1.02);
 }
 
 .learn-more-btn {
-  background-color: #2196f3;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 1rem;
+  background-color: rgb(213, 154, 59);
   color: white;
-  border: none;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, .2);
 }
 
 .learn-more-btn:hover {
-  background-color: #1976d2;
+  background-color: rgb(175, 120, 45);
+  transform: scale(1.02);
 }
 
 .error {

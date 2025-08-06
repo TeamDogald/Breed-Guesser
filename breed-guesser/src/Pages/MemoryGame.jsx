@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Cards from "../Components/MemoryGame/Cards";
-import "../Components/MemoryGame/Memory.css";
+import "./MemoryGame.css";
 
 const MemoryGame = () => {
   const [score, setScore] = useState(0);
@@ -20,12 +20,14 @@ const MemoryGame = () => {
 
   return (
     <section className="memory">
-      <h1 className="memory-title">Match the Doggy Pair</h1>
+      <h2 className="memory-title">Match the Doggy Pair</h2>
 
       <div className="memory-controls">
-        <span>Score: {score}</span>
-        <span>Moves: {moves}</span>
-        <button onClick={handleReset}>Reset</button>
+        <p>
+          Score: <strong>{score}</strong> | Moves: <strong>{moves}</strong>
+        </p>
+        <br />
+        <div className="memory-btn" onClick={handleReset}>Reset</div>
       </div>
 
       <Cards
@@ -36,9 +38,9 @@ const MemoryGame = () => {
       />
 
       {gameWon && (
-        <div className="memory-victory">
+        <div className="memory-controls">
           <h2>You won! 🎉</h2>
-          <button onClick={handleReset}>Play Again</button>
+          <div className="memory-btn" onClick={handleReset}>Play Again</div>
         </div>
       )}
     </section>

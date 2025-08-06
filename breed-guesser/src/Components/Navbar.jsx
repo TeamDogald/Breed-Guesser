@@ -23,13 +23,13 @@ const NavBar = () => {
         <span className="website-name">Breed Guesser</span>
       </div>
 
-      <button
+      <div
         className="hamburger"
         aria-label="Toggle menu"
         onClick={() => setMenuOpen((prev) => !prev)}
       >
         <span>{menuOpen ? "✕" : "☰"}</span>
-      </button>
+      </div>
 
       {/* Desktop Menu */}
       <ul id="navbar" className={menuOpen ? "open" : ""}>
