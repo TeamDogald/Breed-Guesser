@@ -15,11 +15,12 @@ Created by [Nico Aroca](https://github.com/tailsmster) and [Berlineda Faurelus](
 
 ##  🖼️ Screenshots
 
-### 📱 Mobile  
-<img src="./screenshots/breeedguesser_mobile.png-mobile.png" width="300" alt="Mobile Screenshot" />
 
 ### 🖥️ Desktop  
-<img src="./screenshots/breeedguesser_desktop.png-desktop.png" width="600" alt="Desktop Screenshot" />
+<img src="https://github.com/TeamDogald/Breed-Guesser/blob/main/screenshots/breeedguesser_desktop.png?raw=true" width="600" alt="Desktop Screenshot" />
+
+### 📱 Mobile  
+<img src="https://github.com/TeamDogald/Breed-Guesser/blob/main/screenshots/breeedguesser_mobile.png?raw=true" width="300" alt="Mobile Screenshot" />
 
 ## 📦 API
 
