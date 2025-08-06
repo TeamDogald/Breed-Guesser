@@ -6,8 +6,14 @@ Created by [Nico Aroca](https://github.com/tailsmster) and [Berlineda Faurelus](
 
 **Breed Guesser** is a fun and interactive app for dog lovers that utilizes the Dog API! Users can test their knowledge of dog breeds in a guessing game, search for specific breeds, and browse random dog pictures!
 
+## 🌐 Site URL
 
-## Screenshots
+> https://teamdogald.github.io/Breed-Guesser/
+
+---
+
+
+##  🖼️ Screenshots
 
 ### 📱 Mobile  
 <img src="./screenshots/breeedguesser_mobile.png-mobile.png" width="300" alt="Mobile Screenshot" />
