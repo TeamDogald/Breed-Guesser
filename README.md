@@ -44,41 +44,28 @@ To ensure that we can complete all core features of the application in 1 week, w
 
 **Day 1**
 
-- [ ] Complete the project proposal - Due **03/18**
-- [ ] Setup the project's scrumboard on github - Due **03/18**
-- [ ] Create a new vite-project and setup the project skeleton - Due **03/18**
+- [x] Complete the project proposal - Due **03/18**
+- [x] Setup the project's scrumboard on github - Due **03/18**
+- [x] Create a new vite-project and setup the project skeleton - Due **03/18**
 
 **Day 2**
 
-- [ ] Start fetching the required data from the endpoints - Due **03/19**
-- [ ] Start working on the different page's components (static) - Due **03/19**
-- [ ] Make sure our API works. - Due **03/19**
+- [x] Start fetching the required data from the endpoints - Due **03/19**
+- [x] Start working on the different page's components (static) - Due **03/19**
+- [x] Make sure our API works. - Due **03/19**
 
 **Day 3**
 
-- [ ] Start rendering the fetched data - Due **03/20**
-- [ ] Make sure the pages are linked together properly - Due **03/20**
+- [x] Start rendering the fetched data - Due **03/20**
+- [x] Make sure the pages are linked together properly - Due **03/20**
 
 **Day 4**
 
-- [ ] Make sure components such as the navbar and search bars are working correctly. - Due **03/21**
-- [ ] Complete the styling - Due **03/21**
+- [x] Make sure components such as the navbar and search bars are working correctly. - Due **03/21**
+- [x] Complete the styling - Due **03/21**
 
 **Day 5**
 
-- [ ] Deploy to github pages - Due **03/22**
-- [ ] Start working on stretch features - Due **03/22**
+- [x] Deploy to github pages - Due **03/22**
+- [x] Start working on stretch features - Due **03/22**
 
-## Wireframes of each page in your application
-
-Below, you can find wireframes for our project. Each wireframe shows a different page of our application as well as the key components of the application. Details such as specific text values or images are intentionally not included:
-
-[Wireframe for page 1]
-
-[Wireframe for page 2]
-
-[Wireframe for page 3]
-
-[Wireframe for page 4]
-
-[Wireframe for page 5]
